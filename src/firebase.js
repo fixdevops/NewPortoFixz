@@ -5,21 +5,15 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyBgm3ugavKm2Bf9vcE98Ay2Q771lhRWzvM",
+  authDomain: "fikri-portfolio.firebaseapp.com",
+  projectId: "fikri-portfolio",
+  storageBucket: "fikri-portfolio.firebasestorage.app",
+  messagingSenderId: "369574621557",
+  appId: "1:369574621557:web:5b0149dc0741fdf0c6e33c"
 };
 
-let app;
-try {
-  app = initializeApp(firebaseConfig);
-} catch (error) {
-  console.error("Firebase initialization error:", error);
-}
+const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 const auth = getAuth(app);
